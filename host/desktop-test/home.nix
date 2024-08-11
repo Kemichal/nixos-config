@@ -11,6 +11,7 @@
       ktorrent
       lazygit
       libreoffice-qt
+      nixpkgs-fmt
       obsidian
       okular
       remmina
@@ -34,6 +35,14 @@
     };
 
     stateVersion = "24.05";
+  };
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      jnoortheen.nix-ide
+      oderwat.indent-rainbow
+    ];
   };
 
   programs.bash.enable = true;
