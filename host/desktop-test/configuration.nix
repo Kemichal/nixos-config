@@ -31,9 +31,6 @@
   services.openssh.enable = true;
   services.tailscale.enable = true;
 
-  #services.desktopManager.cosmic.enable = true;
-  #services.displayManager.cosmic-greeter.enable = true;
-
   # plasma old
   #services.xserver.enable = true;
   #services.displayManager.sddm.enable = true;
@@ -43,10 +40,8 @@
   services = {
     desktopManager.plasma6 = {
       enable = true;
-      #enableQt5Integration = true; #disable for qt6 full version
     };
     displayManager = {
-      #defaultSession = "plasma";
       sddm = {
         enable = true;
         wayland.enable = true;
@@ -60,6 +55,8 @@
       vim
       htop
     ];
+
+  programs.steam.enable = true;
 
   system.stateVersion = "24.05";
 }

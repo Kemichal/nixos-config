@@ -1,5 +1,5 @@
 {
-  description = "Kemichal's nixos configuration";
+  description = "NixOS configuration";
   inputs = {
     nixpkg.url = "github:nixos/nixpkgs/nixos-24.05";
 
@@ -8,35 +8,34 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixos-cosmic = {
-      url = "github:lilyinstarlight/nixos-cosmic";
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, disko, nixpkgs, nixos-cosmic, ... }: {
+  outputs = { self, disko, nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
+
       test = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         modules = [
+          ./host/test/configuration.nix
           disko.nixosModules.disko
-          (./. + "/host/test/configuration.nix")
         ];
       };
+
       desktop-test = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         modules = [
+          ./host/desktop-test/configuration.nix
           disko.nixosModules.disko
+          home-manager.nixosModules.home-manager
           {
-            nix.settings = {
-              substituters = [ "https://cosmic.cachix.org/" ];
-              trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-            };
+            home-manager.useUserPackages = true;
+            home-manager.users.ra = import ./host/desktop-test/home.nix;
           }
-          nixos-cosmic.nixosModules.default
-          (./. + "/host/desktop-test/configuration.nix")
         ];
       };
+
     };
   };
 }
