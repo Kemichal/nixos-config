@@ -17,6 +17,9 @@
   networking.hostName = "desktop-test";
   time.timeZone = "Europe/Stockholm";
 
+  services.xserver.xkb.layout = "se";
+  console.keyMap = "sv-latin1";
+
   users.users.ra = {
     isNormalUser = true;
     initialPassword = "test";
