@@ -29,6 +29,7 @@
       desktop-test = nixpkgs.lib.nixosSystem {
         modules = [
           ./host/desktop-test/configuration.nix
+          { system.configurationRevision = if self ? rev then self.rev else "dirty"; }
           disko.nixosModules.disko
           home-manager.nixosModules.home-manager
           {
