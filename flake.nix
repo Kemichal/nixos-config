@@ -39,6 +39,19 @@
         ];
       };
 
+      vivo = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./host/vivo/configuration.nix
+          { system.configurationRevision = if self ? rev then self.rev else "dirty"; }
+          #disko.nixosModules.disko
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useUserPackages = true;
+            home-manager.users.ra = import ./host/vivo/home.nix;
+          }
+        ];
+      };
+
     };
   };
 }
