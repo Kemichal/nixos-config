@@ -18,7 +18,7 @@
       slack
       spotify
       synthesia
-      #teams
+      teams-for-linux
       vlc
       vscode
       # missing programs
