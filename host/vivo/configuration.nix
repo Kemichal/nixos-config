@@ -87,8 +87,8 @@
   environment.systemPackages = with pkgs;
     [
       git
-      vim
       htop
+      vim
     ];
 
   programs.steam.enable = true;
