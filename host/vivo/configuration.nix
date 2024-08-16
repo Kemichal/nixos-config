@@ -22,6 +22,10 @@
   networking.hostName = "vivo";
   networking.networkmanager.enable = true; # TODO
 
+  fonts.packages = with pkgs; [
+    font-awesome # needed by waybar default config
+  ];
+
   time.timeZone = "Europe/Stockholm";
 
   i18n.extraLocaleSettings = {
@@ -67,6 +71,8 @@
   services.tailscale.enable = true;
 
   programs.hyprland.enable = true;
+  # Fixes electron in hyprland
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # plasma old
   #services.xserver.enable = true;

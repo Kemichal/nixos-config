@@ -24,6 +24,9 @@
     stateVersion = "24.05";
   };
 
+  xdg.configFile."kitty/kitty.conf".source = ./files/kitty.conf;
+  xdg.configFile."hypr/hyprland.conf".source = ./files/hyprland.conf;
+
   programs.firefox = {
     enable = true;
     profiles = {
