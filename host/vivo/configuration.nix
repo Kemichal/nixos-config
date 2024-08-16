@@ -48,7 +48,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # jack.enable = true; # TODO
+    jack.enable = true;
   };
 
   users.users.ra = {
@@ -65,6 +65,8 @@
 
   services.openssh.enable = true;
   services.tailscale.enable = true;
+
+  programs.hyprland.enable = true;
 
   # plasma old
   #services.xserver.enable = true;

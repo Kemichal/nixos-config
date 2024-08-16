@@ -47,6 +47,7 @@
           home-manager.nixosModules.home-manager
           {
             home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "bak";
             home-manager.users.ra = import ./host/vivo/home.nix;
           }
         ];

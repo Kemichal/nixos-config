@@ -16,6 +16,9 @@
       remmina
       spotify
       synthesia
+      waybar
+      kitty
+      rofi-wayland
     ];
 
     stateVersion = "24.05";
