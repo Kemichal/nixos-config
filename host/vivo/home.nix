@@ -19,6 +19,7 @@
       waybar
       kitty
       rofi-wayland
+      networkmanagerapplet
     ];
 
     stateVersion = "24.05";
