@@ -74,6 +74,8 @@
   # Fixes electron in hyprland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  programs.starship.enable = true;
+
   # plasma old
   #services.xserver.enable = true;
   #services.displayManager.sddm.enable = true;
