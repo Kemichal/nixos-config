@@ -8,6 +8,7 @@
 
   programs.vscode = {
     enable = true;
+    enableUpdateCheck = false;
     extensions = with pkgs.vscode-extensions; [
       jnoortheen.nix-ide
       oderwat.indent-rainbow
