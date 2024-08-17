@@ -26,7 +26,10 @@
   };
 
   xdg.configFile."kitty/kitty.conf".source = ./files/kitty.conf;
-  xdg.configFile."hypr/hyprland.conf".source = ./files/hyprland.conf;
+  xdg.configFile."hypr/hyprland.conf".source = pkgs.substituteAll {
+    src = ./files/hyprland.conf;
+    pam_kwallet_init = "${pkgs.kdePackages.kwallet-pam}/libexec/pam_kwallet_init";
+  };
 
   programs.firefox = {
     enable = true;
