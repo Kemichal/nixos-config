@@ -4,6 +4,7 @@
     packages = with pkgs; [
       _1password-gui
       firefox
+      libnotify
       obsidian
       okular
       spotify
