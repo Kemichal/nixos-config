@@ -1,4 +1,5 @@
-{}: {
+{ ... }:
+{
   time.timeZone = "Europe/Stockholm";
 
   i18n.extraLocaleSettings = {
