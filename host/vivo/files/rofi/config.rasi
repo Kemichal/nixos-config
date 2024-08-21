@@ -1,0 +1,4 @@
+configuration {
+  terminal: "@kittyPath@";
+}
+@theme "@themesPath@/gruvbox-dark.rasi"

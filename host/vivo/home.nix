@@ -30,6 +30,11 @@
     src = ./files/hyprland.conf;
     pam_kwallet_init = "${pkgs.kdePackages.kwallet-pam}/libexec/pam_kwallet_init";
   };
+  xdg.configFile."rofi/config.rasi".source = pkgs.substituteAll {
+    src = ./files/rofi/config.rasi;
+    kittyPath = "${pkgs.kitty}/bin/kitty";
+    themesPath = "${pkgs.rofi-wayland}/share/rofi/themes";
+  };
 
   programs.firefox = {
     enable = true;
