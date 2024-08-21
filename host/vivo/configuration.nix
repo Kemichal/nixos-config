@@ -39,6 +39,7 @@
       git
       htop
       swaynotificationcenter
+      tldr
       vim
     ];
 
