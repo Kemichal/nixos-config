@@ -36,6 +36,7 @@
     themesPath = "${pkgs.rofi-wayland}/share/rofi/themes";
   };
 
+/*
   programs.firefox = {
     enable = true;
     profiles = {
@@ -55,5 +56,5 @@
       };
     };
   };
-
+*/
 }
