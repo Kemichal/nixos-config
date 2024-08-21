@@ -38,6 +38,7 @@
     [
       git
       htop
+      hyprpaper
       swaynotificationcenter
       tldr
       vim
