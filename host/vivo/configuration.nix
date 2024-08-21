@@ -58,6 +58,8 @@
     };
   };
 
+  services.logind.powerKey = "ignore";
+
   # Sound
   sound.enable = true;
   hardware.pulseaudio.enable = false;
