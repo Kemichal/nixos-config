@@ -1,4 +1,4 @@
 configuration {
   terminal: "@kittyPath@";
 }
-@theme "@themesPath@/gruvbox-dark.rasi"
+@theme "~/.config/rofi/mytheme.rasi"
