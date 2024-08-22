@@ -73,10 +73,17 @@
     jack.enable = true;
   };
 
+  security.pam.loginLimits = [
+    { domain = "@audio"; item = "memlock"; type = "-"; value = "500000"; }
+    { domain = "@audio"; item = "rtprio"; type = "-"; value = "90"; }
+    { domain = "@audio"; item = "nice"; type = "-"; value = "-10"; }
+  ];
+
   users.users.ra = {
     isNormalUser = true;
     initialPassword = "test";
     extraGroups = [
+      "audio"
       "networkmanager"
       "wheel"
     ];
