@@ -26,6 +26,7 @@
   };
 
   xdg.configFile."kitty/kitty.conf".source = ./files/kitty.conf;
+  xdg.configFile."hypr/hyprlock.conf".source = ./files/hyprlock.conf;
   xdg.configFile."hypr/hyprland.conf".source = pkgs.substituteAll {
     src = ./files/hyprland.conf;
     pam_kwallet_init = "${pkgs.kdePackages.kwallet-pam}/libexec/pam_kwallet_init";
