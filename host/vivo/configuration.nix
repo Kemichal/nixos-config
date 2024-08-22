@@ -24,7 +24,7 @@
   networking.networkmanager.enable = true; # TODO
 
   fonts.packages = with pkgs; [
-    font-awesome # needed by waybar default config
+    font-awesome # used in waybar+hyprlock
   ];
 
   programs.hyprland.enable = true;
@@ -38,6 +38,7 @@
     [
       git
       htop
+      hyprlock
       hyprpaper
       swaynotificationcenter
       tldr
