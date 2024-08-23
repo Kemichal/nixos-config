@@ -10,16 +10,17 @@
 
   home = {
     packages = with pkgs; [
+      graphite-cursors
+      kitty
       lazygit
+      networkmanagerapplet
       obsidian
       okular
       remmina
+      rofi-wayland
       spotify
       synthesia
       waybar
-      kitty
-      rofi-wayland
-      networkmanagerapplet
     ];
 
     stateVersion = "24.05";
