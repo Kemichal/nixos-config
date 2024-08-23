@@ -38,6 +38,11 @@
     kittyPath = "${pkgs.kitty}/bin/kitty";
   };
 
+  gtk = {
+    enable = true;
+    cursorTheme.name = "graphite-dark";
+  };
+
 /*
   programs.firefox = {
     enable = true;
