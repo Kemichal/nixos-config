@@ -42,3 +42,4 @@
     enable = true;
     cursorTheme.name = "graphite-dark";
   };
+}
