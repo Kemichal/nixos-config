@@ -1,0 +1,4 @@
+configuration {
+  terminal: "@kittyPath@";
+}
+@theme "~/.config/rofi/mytheme.rasi"

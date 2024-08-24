@@ -2,7 +2,7 @@
   disko.devices = {
     disk = {
       main = {
-        device = "/dev/vda"; # TODO
+        device = "/dev/disk/by-id/wwn-0x55cd2e404bd75f8b"; # USB test
         type = "disk";
         content = {
           type = "gpt";
